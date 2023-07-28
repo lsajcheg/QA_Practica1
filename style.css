@@ -1,0 +1,22 @@
+/* Estilos personalizados para el banner promocional */
+.jumbotron {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 30px;
+}
+
+.jumbotron img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.jumbotron h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Estilos para las tarjetas de productos destacados */
+.card {
+    margin-bottom: 20px;
+}
