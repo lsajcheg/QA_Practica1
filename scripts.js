@@ -40,4 +40,95 @@ if (window.location.pathname.includes("catalogo.html")) {
 } else {
     enlaceCatalogo.classList.remove("active");
 }
+// ...
+
+// Función para mostrar los productos según la categoría seleccionada
+function mostrarProductosPorCategoria(categoriaSeleccionada) {
+    const contenedorProductos = document.getElementById("catalogoProductos");
+    contenedorProductos.innerHTML = '';
+
+    listaProductos.forEach(producto => {
+        // Verifica si el producto pertenece a la categoría seleccionada
+        if (producto.categoria === categoriaSeleccionada || categoriaSeleccionada === 'all') {
+            const productoHTML = `
+                <div class="col-md-4">
+                    <div class="producto">
+                        <img src="${producto.imagen}" alt="${producto.nombre}">
+                        <h3>${producto.nombre}</h3>
+                        <p>Precio: $${producto.precio}</p>
+                    </div>
+                </div>
+            `;
+            contenedorProductos.innerHTML += productoHTML;
+        }
+    });
+}
+
+// ...
+
+// Eventos para los botones de filtrado
+document.querySelector("[data-filter='all']").addEventListener("click", function () {
+    filtrarProductos('all');
+});
+
+document.querySelector("[data-filter='hombres']").addEventListener("click", function () {
+    filtrarProductos('hombres');
+});
+
+document.querySelector("[data-filter='mujeres']").addEventListener("click", function () {
+    filtrarProductos('mujeres');
+});
+
+document.querySelector("[data-filter='niños']").addEventListener("click", function () {
+    filtrarProductos('niños');
+});
+
+// Llama a la función para mostrar todos los productos al cargar la página
+mostrarProductosPorCategoria('all');
+
+// ...
+
+// Función para mostrar los productos según la categoría seleccionada
+function mostrarProductosPorCategoria(categoriaSeleccionada) {
+    const contenedorProductos = document.getElementById("catalogoProductos");
+    contenedorProductos.innerHTML = '';
+
+    listaProductos.forEach(producto => {
+        // Verifica si el producto pertenece a la categoría seleccionada
+        if (producto.categoria === categoriaSeleccionada || categoriaSeleccionada === 'all') {
+            const productoHTML = `
+                <div class="col-md-4">
+                    <div class="producto">
+                        <img src="${producto.imagen}" alt="${producto.nombre}">
+                        <h3>${producto.nombre}</h3>
+                        <p>Precio: $${producto.precio}</p>
+                    </div>
+                </div>
+            `;
+            contenedorProductos.innerHTML += productoHTML;
+        }
+    });
+}
+
+// ...
+
+// Eventos para los botones de filtrado
+document.querySelector("[data-filter='all']").addEventListener("click", function () {
+    filtrarProductos('all');
+});
+
+document.querySelector("[data-filter='hombres']").addEventListener("click", function () {
+    filtrarProductos('hombres');
+});
+
+document.querySelector("[data-filter='mujeres']").addEventListener("click", function () {
+    filtrarProductos('mujeres');
+});
+
+document.querySelector("[data-filter='niños']").addEventListener("click", function () {
+    filtrarProductos('niños');
+});
+
+// Llama a la función para mostrar todos los productos al cargar la página
+mostrarProductosPorCategoria('all');
 
