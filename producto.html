@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Productos</title>
+    <!-- Agrega los enlaces a los estilos Bootstrap y tu archivo CSS personalizado -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Barra de navegación (puedes reutilizarla desde index.html si es la misma) -->
+
+    <!-- Filtrar por categoría -->
+    <div class="container">
+        <h2>Filtrar por categoría:</h2>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary" data-filter="all">Todos</button>
+            <button type="button" class="btn btn-primary" data-filter="hombres">Hombres</button>
+            <button type="button" class="btn btn-primary" data-filter="mujeres">Mujeres</button>
+            <button type="button" class="btn btn-primary" data-filter="niños">Niños</button>
+        </div>
+    </div>
+
+    <!-- Cuadrícula de productos -->
+    <div class="container">
+        <div class="row" id="catalogoProductos">
+            <!-- Aquí se mostrarán los productos utilizando JavaScript -->
+        </div>
+    </div>
+
+    <!-- Agrega el enlace a la librería de JavaScript de Bootstrap y tu archivo JS personalizado -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+

@@ -1,10 +1,34 @@
-// Agregar una clase CSS a la tarjeta de producto cuando se hace clic en ella
-document.addEventListener("DOMContentLoaded", function() {
-    const cards = document.querySelectorAll(".card");
+// Supongamos que tienes una lista de productos destacados en forma de objetos.
+const productosDestacados = [
+    { nombre: "Producto 1", precio: 19.99, imagen: "ruta-imagen-1.jpg" },
+    { nombre: "Producto 2", precio: 29.99, imagen: "ruta-imagen-2.jpg" },
+    // Agrega más productos si es necesario
+];
 
-    cards.forEach(card => {
-        card.addEventListener("click", function() {
-            this.classList.toggle("selected");
-        });
+// Función para mostrar los productos destacados en la página
+function mostrarProductosDestacados() {
+    const contenedorProductos = document.getElementById("productosDestacados");
+
+    productosDestacados.forEach(producto => {
+        const productoHTML = `
+            <div class="col-md-4">
+                <div class="producto">
+                    <img src="${producto.imagen}" alt="${producto.nombre}">
+                    <h3>${producto.nombre}</h3>
+                    <p>Precio: $${producto.precio}</p>
+                </div>
+            </div>
+        `;
+        contenedorProductos.innerHTML += productoHTML;
     });
+}
+
+// Evento cuando se envía el formulario de suscripción
+document.getElementById("formularioSuscripcion").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const nombre = document.getElementById("nombre").value;
+    const email = document.getElementById("email").value;
+
+    // Aquí puedes agregar la lógica para enviar los datos del formulario a un servidor o realizar otras acciones.
 });
+
