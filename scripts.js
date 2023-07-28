@@ -31,4 +31,13 @@ document.getElementById("formularioSuscripcion").addEventListener("submit", func
 
     // Aquí puedes agregar la lógica para enviar los datos del formulario a un servidor o realizar otras acciones.
 });
+// Obtén el enlace de la barra de navegación que apunta a la página del catálogo
+const enlaceCatalogo = document.querySelector(".nav-link[href='catalogo.html']");
+
+// Verifica si la página actual es catalogo.html y agrega la clase activa al enlace
+if (window.location.pathname.includes("catalogo.html")) {
+    enlaceCatalogo.classList.add("active");
+} else {
+    enlaceCatalogo.classList.remove("active");
+}
 
